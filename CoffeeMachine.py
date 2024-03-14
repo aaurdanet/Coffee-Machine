@@ -32,7 +32,6 @@ resources = {
 }
 
 
-
 def get_report():
     water = resources['water']
     milk = resources['milk']
@@ -41,8 +40,7 @@ def get_report():
     print(f"Water: {water}ml\nMilk: {milk}ml\nCoffee: {coffee}g\nMoney: {money}$")
 
 
-
-def make_espresso(amount_of_quarters,amount_of_dimes, amount_of_nickles, amount_of_pennies):
+def make_espresso(amount_of_quarters, amount_of_dimes, amount_of_nickles, amount_of_pennies):
     making_coffee = True
     water = MENU['espresso']['ingredients']['water']
     coffee = MENU['espresso']['ingredients']['coffee']
@@ -85,7 +83,7 @@ def make_espresso(amount_of_quarters,amount_of_dimes, amount_of_nickles, amount_
         return 1
 
 
-def make_latte(amount_of_quarters,amount_of_dimes, amount_of_nickles, amount_of_pennies):
+def make_latte(amount_of_quarters, amount_of_dimes, amount_of_nickles, amount_of_pennies):
     making_coffee = True
     water = MENU['latte']['ingredients']['water']
     milk = MENU['latte']['ingredients']['milk']
@@ -138,7 +136,7 @@ def make_latte(amount_of_quarters,amount_of_dimes, amount_of_nickles, amount_of_
         return 1
 
 
-def make_cappuccino(amount_of_quarters,amount_of_dimes, amount_of_nickles, amount_of_pennies):
+def make_cappuccino(amount_of_quarters, amount_of_dimes, amount_of_nickles, amount_of_pennies):
     making_coffee = True
     water = MENU['cappuccino']['ingredients']['water']
     milk = MENU['cappuccino']['ingredients']['milk']
@@ -191,7 +189,7 @@ def make_cappuccino(amount_of_quarters,amount_of_dimes, amount_of_nickles, amoun
         return 1
 
 
-def payment(chosen_coffee, amount_of_quarters,amount_of_dimes, amount_of_nickles, amount_of_pennies):
+def payment(chosen_coffee, amount_of_quarters, amount_of_dimes, amount_of_nickles, amount_of_pennies):
     quarters = 0.25
     dimes = 0.10
     nickles = 0.05
@@ -246,9 +244,10 @@ def payment(chosen_coffee, amount_of_quarters,amount_of_dimes, amount_of_nickles
             return refund
         elif total == value:
             resources['money'] += value
-            return ("NO CHANGE")
+            return "NO CHANGE"
         elif total < value:
             return 0
+
 
 def machine():
     serving = True
@@ -257,13 +256,10 @@ def machine():
 
         option = input("What would you like? (espresso/latte/cappuccino):\n")
 
-
         if option == "off":
             print("Coffe machine is shutting down....")
             serving = False
             exit()
-
-
 
         if option == "report":
             get_report()
