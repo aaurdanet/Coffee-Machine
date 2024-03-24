@@ -274,10 +274,11 @@ def machine():
             espresso = make_espresso(quarters, dimes, nickles, pennies)
             if espresso == 1:
                 coins = payment(option, quarters, dimes, nickles, pennies)
-                print("Here is your espresso ☕️. Enjoy!")
                 if coins == 0:
                     error = "You do not have enough money. Money refunded"
                     print(error)
+                else:
+                    print("Here is your espresso ☕️. Enjoy!")
                 print(f"{coins}")
             elif espresso == 0:
                 coins = payment(option, quarters, dimes, nickles, pennies)
@@ -287,11 +288,13 @@ def machine():
             latte = make_latte(quarters, dimes, nickles, pennies)
             if latte == 1:
                 coins = payment(option, quarters, dimes, nickles, pennies)
-                print("Here is your latte ☕️. Enjoy!")
                 if coins == 0:
                     error = "You do not have enough money. Money refunded"
                     print(error)
+                else:
+                    print("Here is your latte ☕️. Enjoy!")
                 print(f"{coins}")
+
             elif latte == 0:
                 coins = payment(option, quarters, dimes, nickles, pennies)
                 serving = False
@@ -300,10 +303,11 @@ def machine():
             cappuccino = make_cappuccino(quarters, dimes, nickles, pennies)
             if cappuccino == 1:
                 coins = payment(option, quarters, dimes, nickles, pennies)
-                print("Here is your cappuccino ☕️. Enjoy!")
                 if coins == 0:
                     error = "You do not have enough money. Money refunded"
                     print(error)
+                else:
+                    print("Here is your cappuccino ☕️. Enjoy!")
                 print(f"{coins}")
             elif cappuccino == 0:
                 coins = payment(option, quarters, dimes, nickles, pennies)
