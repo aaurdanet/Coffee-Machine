@@ -283,7 +283,7 @@ def machine():
             elif espresso == 0:
                 coins = payment(option, quarters, dimes, nickles, pennies)
                 serving = False
-
+                
         elif option == "latte":
             latte = make_latte(quarters, dimes, nickles, pennies)
             if latte == 1:
@@ -294,11 +294,10 @@ def machine():
                 else:
                     print("Here is your latte ☕️. Enjoy!")
                 print(f"{coins}")
-
             elif latte == 0:
                 coins = payment(option, quarters, dimes, nickles, pennies)
                 serving = False
-
+                
         elif option == "cappuccino":
             cappuccino = make_cappuccino(quarters, dimes, nickles, pennies)
             if cappuccino == 1:
